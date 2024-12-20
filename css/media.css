@@ -1,0 +1,376 @@
+/* === DESKTOP FIRST === */
+
+/* xl <= Extra extra large (xxl) */
+@media (max-width : 1400px) {
+	.card,.form_widget{
+		padding: 60px 40px;
+	}
+	.bg_widget::before{
+		background-size: 140px;
+	}
+	.score_widget{
+		min-height: 248px;
+	}
+	.scope_widget_item span{
+		margin-right: 40px;
+	}
+	.score_widget.score_mh{
+		min-height: 256px ;
+	}
+	h1, .one{
+		font-size: calc(var(--index)* 2.8);
+	}
+}
+
+/* lg <= Extra large (xl) */
+@media (max-width : 1200px) {
+	h2, .two{
+		font-size: calc(var(--index)* 2.4);
+	}
+	.widget::before{
+		content: none;
+	}
+	.first_screen_home_widget{
+		background: var(--purple);
+	}
+}
+
+/* md <= Large (lg) */
+@media (max-width : 992px) {
+	.scope_widget hr{
+		margin: 20px 0;
+	}
+	.scope_widget_item span{
+		line-height: 1;
+	}
+	.first_screen_home_widget{
+		padding: 24px 16px;
+	}
+	.score_widget .nm_text{
+		font-size: 24px;
+	}
+	h2,.two{
+		font-size: calc(var(--index)* 2);
+	}
+	h3,.three{
+		font-size: calc(var(--index)* 1.8);
+	}
+	h4,.four{
+		font-size: calc(var(--index)* 1.6);
+	}
+	h5, .five{
+		font-size: calc(var(--index)* 1.4);
+	}
+	section h4,section .four{
+		font-size: calc(var(--index)* 2);
+	}
+	.slider_layer::after, .slider_layer::before{
+		min-width: 130px;
+	}
+	.clients_slider .swiper-slide{
+		max-width: 80px;
+	}
+	.clients_slider .swiper-slide img{
+		padding: 18px 0;
+		max-width: 100%;
+	}
+	.bg_widget::before{
+		background-size: 93px;
+	}
+	aside .btn{
+		width: 100%;
+		padding: 13px 20px;
+	}
+
+	aside.active{
+		top: 0;
+		visibility: visible;
+		opacity: 1;
+	}
+	aside ul{
+		list-style: none;
+		padding-left: 0;
+		margin-bottom: 0;
+	}
+	aside ul li{
+		width: 100%;
+	}
+	aside ul li a{
+		font-size: 24px;
+		color: #fff;
+		text-decoration: none;
+		display: block;
+		padding: 12px 0;
+	}
+	aside ul li:first-child a{
+		padding-top: 0;
+	}
+	aside nav{
+		line-height: 1;
+	}
+	header{
+		position: fixed;
+	}
+	footer{
+		padding: 32px 0;
+	}
+	section{
+		padding-top: 64px;
+	}
+	.card{
+		padding: 60px 16px;
+	}
+	.grid_two{
+		grid-gap: 16px;
+	}
+	.service_card{
+		padding: 16px;
+	}
+	.advantage_card + *{
+		padding-left: 0;
+		margin-left: 0;
+		padding-top: 24px !important;
+		margin-top: 26px;
+	}
+	.advantage_card + *::before{
+		height: 1px;
+		width: 100%;
+		background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #fff 50%, rgba(0, 0, 0, 0) 100%);
+		bottom: auto;
+	}
+	.advantage_card{
+		padding: 0;
+	}
+	.advantades_widget{
+		padding: 24px 16px;
+	}
+	.pd_widget,.form_widget{
+		padding: 32px 16px;
+	}
+	.testimonial_widget::before{
+		left: 10px;
+		top: 10px;
+	}
+	form button{
+		width: 100%;
+	}
+	button .btn{
+		width: 100%;
+	}
+	form button + *{
+		margin-left: 0;
+		margin-top: 16px;
+	}
+	.score_widget{
+		padding: 16px 20px;
+	}
+	.nav_widget ul{
+		flex-flow: column;
+		align-items: start;
+	}
+	.nav_widget ul li + *{
+		margin-left: 0;
+		margin-top: 16px;
+	}
+	.radius{
+		border-radius: 24px;
+	}
+	.scope_widget_item span{
+		flex: 0;
+		max-width: 90px;
+	}
+}
+
+/* sm <= Medium (md) */
+@media (max-width : 768px) {
+	.service_card{
+		min-height: auto;
+	}
+	.text-center{
+		text-align: left;
+	}
+}
+
+/* xs <= Small (sm) */
+@media (max-width : 576px) {
+	.md_text{
+		font-size: 16px;
+	}
+	.slider_layer::after, .slider_layer::before{
+		min-width: 46px;
+	}
+	.score_widget{
+		min-height: 160px;
+	}
+	.bg_widget::before {
+		background-size: 60px;
+	}
+	header{
+		padding: 12px 0;
+	}
+	header .logo svg{
+		max-width: 88px;
+	}
+	main{
+		margin-top: 70px;
+	}
+	h1, .one{
+		font-size: 24px;
+	}
+	h2,.two,.nm_text{
+		font-size: 24px;
+	}
+	h3,.three{
+		font-size: 24px;
+	}
+	h4,.four{
+		font-size: calc(var(--index)* 1.6);
+	}
+	h5, .five,.xxl_text{
+		font-size: 16px
+	}
+	section h4,section .four{
+		font-size: calc(var(--index)* 2);
+	}
+	.scope_widget .four{
+		font-size: 20px;
+	}
+	.tag_cloud *{
+		padding: 10px 16px;
+	}
+	.tag_cloud img{
+		padding: 0;
+	}
+	.grid_two .md_text{
+		font-size: 12px;
+	}
+	.xl_text{
+		font-size: 14px;
+	}
+	.us_text{
+		font-size: 14px;
+	}
+	.testimonial_widget .light_text{
+		font-size: 12px;
+	}
+	.testimonial_widget img{
+		height: 40px;
+		width: 40px;
+		margin-right: 12px;
+	}
+	.score_widget .md_text{
+		font-size: 14px;
+	}
+	.score_widget_text .md_text{
+		font-size: 12px;
+	}
+	.service_card .card_icon{
+		margin-right: 16px;
+	}
+	footer .logo svg{
+		max-width: 88px;
+	}
+	.scope_widget_item span{
+		font-size: 42px;
+	}
+}
+
+
+/* === MOBILE FIRST === */
+
+/* Custom (xs) */
+@media (min-width : 0) {
+
+}
+
+/* Small (sm) */
+@media (min-width : 576px) {
+
+}
+
+/* Medium (md) */
+@media (min-width : 768px) {
+
+}
+
+/* Large (lg) */
+@media (min-width : 992px) {
+	.card_wrapper > div > div:last-child{
+		margin-left: 80px;
+	}
+	.service_carousel{
+		overflow: hidden;
+	}
+}
+
+/* Extra large (xl) */
+@media (min-width : 1200px) {
+	.text {
+		font-size: 18px;
+	}
+
+}
+
+/* Extra extra large (xxl) */
+@media (min-width : 1400px) {
+	.text {
+		font-size: 22px;
+	}
+}
+
+/* fix hover on all devices */
+@media (hover: hover) {
+	/* SERVICE CARDS */
+	a.service_card:hover{
+		color: #000;
+	}
+	a.service_card:hover .card_icon{
+		background: #000;
+	}
+	a.service_card:has(.blue_bg):hover{
+		background: var(--blue);
+	}
+	a.service_card:has(.blue_bg):hover svg path{
+		stroke: var(--blue);
+	}
+	a.service_card:has(.yellow_bg):hover{
+		background: var(--yellow);
+	}
+	a.service_card:has(.yellow_bg):hover svg path{
+		stroke: var(--yellow);
+	}
+	a.service_card:has(.purple_bg):hover{
+		background: var(--purple);
+	}
+	.service_card:has(.purple_bg):hover svg path{
+		stroke: var(--purple);
+	}
+	a.service_card:has(.green_bg):hover{
+		background: var(--green);
+	}
+	a.service_card:has(.green_bg):hover svg path{
+		stroke: var(--green);
+	}
+	a.service_card:has(.pink_bg):hover{
+		background: var(--pink);
+	}
+	a.service_card:has(.pink_bg):hover svg path{
+		stroke: var(--pink);
+	}
+
+	/* BTNS */
+	a:hover{
+		opacity: 0.8;
+	}
+	a.service_card:hover{
+		opacity: 1;
+	}
+	.btn:hover,form button:hover{
+		opacity: 0.8;
+		color: #fff;
+	}
+}
+
+@media (hover: none){
+
+}
