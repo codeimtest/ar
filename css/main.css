@@ -32,6 +32,7 @@
 @font-face { src: url("../fonts/Gilroy-Regular.woff2") format("woff2"); font-family: "Gilroy"; font-weight: 400; font-style: normal; }
 @font-face { src: url("../fonts/Gilroy-Medium.woff2") format("woff2"); font-family: "Gilroy"; font-weight: 500; font-style: normal; }
 @font-face { src: url("../fonts/Gilroy-Semibold.woff2") format("woff2"); font-family: "Gilrot"; font-weight: 600; font-style: normal; }
+@font-face { src: url("../fonts/Unbounded-Regular.woff2") format("woff2"); font-family: "Unbounded"; font-weight: 400; font-style: normal; }
 @font-face { src: url("../fonts/Unbounded-SemiBold.woff2") format("woff2"); font-family: "Unbounded"; font-weight: 600; font-style: normal; }
 
 
@@ -122,6 +123,9 @@ h5,.five{
 }
 .mb_text{
 	font-weight: 500;
+}
+.rb_text{
+	font-weight: 400;
 }
 
 .accent_text{
@@ -228,7 +232,10 @@ button{
 	margin: 0;
 	outline: none;
 }
-
+.white_btn{
+	background: #fff;
+	color: #000;
+}
 .tr_btn{
 	border: none;
 	mix-blend-mode: multiply;
@@ -303,7 +310,9 @@ header .btn,aside .btn{
 	padding: 8px 20px;
 	font-weight: 500;
 }
-
+.btn_group{
+	text-decoration: none;
+}
 .menu_button{
 	position: relative;
 	z-index: 99;
@@ -377,6 +386,7 @@ section{
 	align-content: baseline;
 }
 
+
 .pd_widget{
 	padding: var(--pd_widget);
 }
@@ -385,6 +395,10 @@ input {
 }
 .text-center{
 	text-align: center;
+}
+.page_content a{
+	color: #fff;
+	text-decoration: none;
 }
 /*CORE*/
 
@@ -623,6 +637,10 @@ a.service_card{
 	background: transparent;
 	color: #000;
 }
+.popup .form-group input,.popup .form-group textarea {
+	color: #fff;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
 .form-group label {
 	width: 100%;
 	color: #000;
@@ -631,6 +649,9 @@ a.service_card{
 	position: absolute;
 	transition: opacity .1s ease-in-out,transform .1s ease-in-out,-webkit-transform .1s ease-in-out;
 	-webkit-transform-origin: 0 0;
+}
+.popup .form-group label {
+	color: #fff;
 }
 .form-group input:focus~label, .form-group input:not(:placeholder-shown)~label,.form-group textarea:focus~label, .form-group textarea:not(:placeholder-shown)~label {
 	font-style: normal;
@@ -643,6 +664,9 @@ a.service_card{
 	color:  #000;
 	opacity: 0.64;	opacity: 0.64;
 }
+.popup .form-group input:focus~label, .popup .form-group input:not(:placeholder-shown)~label,.popup .form-group textarea:focus~label, .popup .form-group textarea:not(:placeholder-shown)~label {
+	color: #fff;
+}
 .form-group input::placeholder{
 	opacity: 0;
 	visibility: hidden;
@@ -650,6 +674,9 @@ a.service_card{
 }
 form button + *{
 	margin-left: 40px;
+}
+.popup form button + *{
+	margin-left: 0;
 }
 .widget {
   z-index: 1;
@@ -709,7 +736,197 @@ form button + *{
 .service_carousel .swiper-slide{
 	height: auto;
 }
+.result_widget{
+	padding: 50px 40px;
+}
+.result_widget .advantage_card{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.result_widget .advantage_card + *::before{
+	background: rgba(255, 255, 255, 0.22);
+}
+.promo_widget{
+	padding: 120px 80px;
+	gap: 50px;
+}
+.promo_widget > div:first-child{
+	flex: 1.3;
+}
+.promo_layer{
+	z-index: 1;
+	overflow: hidden;
+}
+.promo_layer::after{
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: url('../images/promo_layer.png') no-repeat right bottom;
+	position: absolute;
+	z-index: -1;
+	background-size: contain;
+	left: 0;
+	top: 0;
+}
+
+.check_list > div + *{
+	margin-top: 20px;
+}
+.check_list svg,.check_list img{
+	min-width: 24px;
+	margin-right: 16px;
+}
+.seo_widget h1,.seo_widget h2,.seo_widget h3,.seo_widget h4,.seo_widget h5{
+	margin-bottom: 32px;
+}
+
+.steps_widget_item {
+	display: flex; /* Создаём флекс-контейнер */
+	align-items: stretch; /* Растягиваем все дочерние элементы по высоте */
+	justify-content: space-between;
+	gap: 44px;
+}
+
+.steps_widget_item > div {
+	flex: 1; /* Устанавливаем равный вес для каждого блока */
+	display: flex; /* Включаем флекс на дочерних элементах */
+	flex-direction: column; /* Сохраняем вертикальную структуру внутри каждого блока */
+	justify-content: space-between; /* Растягиваем содержимое внутри блока */
+}
+
+.steps_widget_item > div:first-child {
+	text-align: right;
+}
+
+.steps_widget_item > div:last-child {
+	padding-bottom: 50px;
+	position: relative;
+	padding-left: 44px;
+}
+
+.steps_widget_item > div:last-child::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 20px;
+	width: 1px;
+	background: #fff;
+	height: 100%;
+}
+
+.steps_widget_item > div:last-child::after {
+	content: '';
+	position: absolute;
+	left: -23px;
+	top: -8px;
+	background: radial-gradient(
+		circle,
+		white 0 8px,
+		rgba(255, 255, 255, 0.277) 8px 16px,
+		rgba(255, 255, 255, 0.12) 16px 48px
+	);
+	border-radius: 50%;
+	width: 48px;
+	height: 48px;
+}
+.steps_widget_item:last-child > div:last-child::before{
+	content: none;
+	opacity: 0;
+	visibility: hidden;
+}
+.city_list {
+ column-count: 4;
+ column-gap: 16px;
+}
+.city_list > div {
+	margin-bottom: 16px;
+}
+.city_list a{
+	color: #fff;
+	text-decoration: none;
+	display: block;
+}
+.map_widget{
+	max-height: 682px;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+.map_widget iframe{
+	width: 100%;
+	height: 100%;
+	min-height: 682px;
+}
 /* FOOTER */
 footer{
 	padding: 60px 0;
+}
+/* POPUP */
+.active.popup {
+	opacity: 1;
+	visibility: visible;
+	z-index: 999;
+}
+
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	outline: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.2s ease all;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: rgb(0 0 0 / .6);
+	z-index: 5;
+}
+.popup.active .popup_dialog{
+	transform: translateY(0%);
+}
+.popup .popup_dialog {
+	min-height: calc(100% - 10rem);
+	max-width: 640px;
+	margin: 5rem auto;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: auto;
+	position: absolute;
+	pointer-events: none;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	transform: translateY(-100%);
+	transition: 0.4s ease all;
+}
+.popup .popup_dialog .popup_wrap {
+	padding: 40px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	pointer-events: auto;
+	outline: 0;
+	background: #141414;
+}
+.popup_wrap .three{
+	font-size: 32px;
+}
+.popup .btn_close{
+	right: -50px;
+	top: -30px;
+	position: absolute;
+	cursor: pointer;
+	transition: var(--transition);
+	background: #141414;
+}
+.popup a{
+	color: #fff;
 }

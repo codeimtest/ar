@@ -1,4 +1,5 @@
 //core
+//menu
 $('.menu_button').click(function(){
 	$('aside').toggleClass('active')
 	$(this).toggleClass('active')
@@ -7,6 +8,30 @@ $('.aside_overlay').click(function(){
 	$('aside,.menu_button').removeClass('active')
 })
 
+// popup
+$('.contact').click(function(e){
+	e.preventDefault();
+	$('.for_contact').addClass('active')
+	$('body').addClass('lock')
+})
+$('.btn_close').click(function(){
+	$('.popup').removeClass('active');
+	$('body').removeClass('lock')
+})
+//click on outside popup
+$(document).mouseup(function (e) {
+	var container = $(".popup_dialog");
+	if (container.has(e.target).length === 0) {
+		$('.popup').removeClass('active');
+		$('body').removeClass('lock');
+	}
+});
+
+$('.btn').click(function () {
+  var getDataBtn = $(this).data('button');
+  var dataBtnOut = $('.popup_output_text');
+  dataBtnOut.text(getDataBtn);
+});
 //sliders
 var swiper = new Swiper(".clients_slider", {
 	slidesPerView: 4.8,
@@ -70,7 +95,10 @@ var swiper3 = new Swiper(".service_carousel", {
 		},
 	}
 });
-//cards
+//mask input
+$(".phone").mask("+7 (999) 999-99-99");
+
+//cards cases
 const cards = gsap.utils.toArray(".card");
 const spacer = 20;
 const minScale = 0.8;
@@ -92,7 +120,6 @@ cards.forEach((card, index) => {
     },
     ease: true,
   });
-
   ScrollTrigger.create({
     trigger: card,
     start: `top-=${index * spacer} top`,
@@ -104,5 +131,4 @@ cards.forEach((card, index) => {
     id: 'pin',
     invalidateOnRefresh: true,
   });
-
 });

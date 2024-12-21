@@ -24,6 +24,7 @@
 	<script src="libs/swiper/swiper-bundle.min.js" defer></script>
 	<script src="libs/gsap/gsap.min.js" defer></script>
 	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="libs/input-mask/jquery.maskedinput.min.js" defer></script>
 	<script src="js/common.js" defer></script>
 
 </head>
@@ -70,7 +71,7 @@
 				</div>
 				<div class="col">
 					<div class="d-flex social_widget align-items-center justify-content-end">
-						<a href="#" class="btn d-none d-lg-inline">Связаться с нами</a>
+						<a href="#" class="btn d-none d-lg-inline contact" data-button="Связаться с нами">Связаться с нами</a>
 						<a href="#" class="d-block">
 							<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<g clip-path="url(#clip0_222_1823)">
@@ -122,7 +123,7 @@
 								<li><a href="#">Контакты</a></li>
 							</ul>
 						</nav>
-						<a href="#" class="btn">Связаться с нами</a>
+						<a href="#" class="btn contact" data-button="Связаться с нами">Связаться с нами</a>
 					</div>
 				</div>
 			</div>
@@ -788,7 +789,7 @@
 									<label for="name">Ваше имя</label>
 								</div>
 								<div class="form-group">
-									<input type="text" name="phone" id="phone" placeholder="номер" required>
+									<input type="text" name="phone" id="phone" class="phone" placeholder="номер" required>
 									<label for="phone">Номер телефона</label>
 								</div>
 								<div class="form-group">
@@ -950,6 +951,33 @@
 			</div>
 		</div>
 	</footer>
+	<div class="popup for_contact">
+		<div class="popup_dialog">
+			<div class="popup_wrap radius">
+				<div class="preloader" style="display: none;">
+					<div class="preloader-container">
+						<span class="animated-preloader"></span>
+					</div>
+				</div>
+				<div class="d-flex justify-content-between mb-4 mb-lg-5">
+					<div class="three popup_output_text">Закажите Programmatic-размещение</div>
+					<div class="btn_close lk_btn">
+						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M13 1L1 13M1 1L13 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+				</div>
+				<form>
+					<div class="form-group">
+						<input type="text" name="phone" class="phone" id="phone-p" placeholder="номер" required>
+						<label for="phone-p">Номер телефона</label>
+					</div>
+					<button class="btn white_btn mt-lg-5 mt-4" style="width: 100%">Отправить</button>
+					<div class="sm_text mt-lg-4 mt-3 mb_text light_text">Нажимая кнопку вы даете соглашение на обработку персональных данных  и соглашаетесь с <a href="#" target="_blank">политикой конфиденциальности</a></div>
+				</form>
+			</div>
+		</div>
+	</div>
 </div>
 
 </body>
