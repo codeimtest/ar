@@ -483,9 +483,73 @@
 	.btn_group .btn:hover{
 		color: #fff;
 	}
+	.tag_cloud .btn:hover{
+		color: #000;
+	}
 
 }
 
 @media (hover: none){
+/* SERVICE CARDS */
+a.service_card:active{
+	color: #000;
+}
+a.service_card:active .card_icon{
+	background: #000;
+}
+a.service_card:has(.blue_bg):active{
+	background: var(--blue);
+}
+a.service_card:has(.blue_bg):active svg path{
+	stroke: var(--blue);
+}
+a.service_card:has(.yellow_bg):active{
+	background: var(--yellow);
+}
+a.service_card:has(.yellow_bg):active svg path{
+	stroke: var(--yellow);
+}
+a.service_card:has(.purple_bg):active{
+	background: var(--purple);
+}
+a.service_card:has(.purple_bg):active svg path{
+	stroke: var(--purple);
+}
+a.service_card:has(.green_bg):active{
+	background: var(--green);
+}
+a.service_card:has(.green_bg):active svg path{
+	stroke: var(--green);
+}
+a.service_card:has(.pink_bg):active{
+	background: var(--pink);
+}
+a.service_card:has(.pink_bg):active svg path{
+	stroke: var(--pink);
+}
+
+/* BTNS */
+a:active{
+	opacity: 0.8;
+}
+a.service_card:active{
+	opacity: 1;
+}
+.btn:active, form button:active{
+	opacity: 0.8;
+	color: #fff;
+}
+.white_btn:active{
+	color: #000;
+}
+.btn_group:active .btn{
+	opacity: 1;
+}
+.btn_group .btn:active{
+	color: #fff;
+}
+.tag_cloud .btn:active{
+	color: #000;
+}
 
 }
