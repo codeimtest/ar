@@ -147,7 +147,14 @@
 		padding-top: 64px;
 	}
 	.card{
-		padding: 60px 16px;
+		padding-left: 16px;
+		padding-right: 16px;
+		top: calc(20px + 60px);
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.card + *{
+		margin-top: 10px;
 	}
 	.grid_two{
 		grid-gap: 16px;

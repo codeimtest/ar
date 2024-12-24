@@ -19,6 +19,8 @@
 	--transition: 0.2s ease all;
 	--pd_widget: 60px 40px;
 	--index: calc(1vw + 1vh);
+	--sg0-space-sm: 1.125rem;
+	--sg0-space-md: 2rem;
 }
 
 /* BOOTSTRAP SETTINGS SECTION */
@@ -68,7 +70,6 @@ html, body {
 }
 main {
 	flex: 1 1 auto;
-	overflow: hidden;
 	margin-top: 110px;
 }
 
@@ -358,7 +359,6 @@ hr{
 }
 section{
 	padding-top: 100px;
-	overflow: hidden;
 	position: relative;
 }
 
@@ -406,7 +406,7 @@ input {
 /*CORE*/
 
 header{
-	padding: 30px 0;
+	padding: 19px 0;
 	position: fixed;
 	width: 100%;
 	transition: var(--transition);
@@ -547,9 +547,32 @@ a.service_card{
 }
 
 /* CARDS GSAP */
+.card + *{
+	margin-top: 40px;
+}
+.stack-cards{
+	--stack-cards-gap: var(--sg0-space-sm);
+  --stack-cards-item-ratio: 2/1;
+	position: sticky;
+	top: 120px;
+	scroll-margin-top: 1200px;
+}
 .card{
-	position: relative;
-	padding: 120px 80px;
+  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(20px + 80px);
+  padding-top: calc(var(--index)* 1.8);
+	padding-bottom: calc(var(--index)* 1.8);;
+	padding-right: 80px;
+	padding-left: 80px;
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+					
+}
+.card_wrapper{
+	position: sticky;
+	top: 100px;
 }
 .card_wrapper span:last-of-type{
 	position: relative;
